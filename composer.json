@@ -1,0 +1,11 @@
+{
+    "description": "A theme for the whole panel: dark and light, built-in and custom presets, scheduled seasonal themes with effects.",
+    "autoload": {
+        "psr-4": {
+            "RustixDev\\Themes\\": "src/"
+        }
+    },
+    "config": {
+        "autoloader-suffix": "ThemesExtension"
+    }
+}

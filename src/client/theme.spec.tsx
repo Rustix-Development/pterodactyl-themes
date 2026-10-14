@@ -24,6 +24,21 @@ function stubCanvas() {
     vi.spyOn(HTMLCanvasElement.prototype, 'getContext').mockReturnValue(ctx as unknown as CanvasRenderingContext2D);
 }
 
+function setupContext(config: Record<string, unknown>) {
+    const screens: string[] = [];
+    const slots: string[] = [];
+    theme.setup?.({
+        meta: { id: 'themes' },
+        config: config as never,
+        views: { override: () => undefined },
+        slots: { register: (name: string) => void slots.push(name) },
+        screens: { register: (id: string) => void screens.push(id) },
+        columns: { register: () => undefined },
+        forms: { extend: () => undefined },
+    } as never);
+    return { screens, slots };
+}
+
 describe('layouts', () => {
     test('keep classic and the slots of the app layout', () => {
         rendered = renderView('layout.app', {
@@ -50,6 +65,17 @@ describe('layouts', () => {
         rendered = renderWithTheme(<Button>Save</Button>, { themes });
 
         expect(rendered.container.querySelector('button[data-ui="button"]')?.textContent).toBe('Save');
+    });
+});
+
+describe('setup', () => {
+    test('registers the admin screen', () => {
+        expect(setupContext({}).screens).toEqual(['admin']);
+    });
+
+    test('adds the account picker only when the admin allows it', () => {
+        expect(setupContext({ allow_user_choice: false }).slots).toEqual([]);
+        expect(setupContext({ allow_user_choice: true }).slots).toEqual(['account.overview.after']);
     });
 });
 
