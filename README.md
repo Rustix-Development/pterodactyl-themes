@@ -4,6 +4,8 @@ A free, open source theme for the Pterodactyl 2.0 panel. It gives the whole pane
 
 It is built on the panel's own theme system, so it changes colours, fonts and shapes only. Every page works the way it always has, and other extensions pick up the colours on their own.
 
+![A server console in the Graphite preset, dark scheme](docs/screenshots/console-dark.png)
+
 ## Features
 
 - **Dark and light.** Every preset has a dark and a light version. Everyone switches for themselves with the sun and moon button in the top bar, and the panel remembers it.
@@ -16,6 +18,25 @@ It is built on the panel's own theme system, so it changes colours, fonts and sh
 - **Effects.** Snow, bats, leaves or confetti draw on one canvas with a capped number of particles (fewer on phones), pause while the tab is in the background, never get in the way of a click, and are switched off for anyone who has reduced motion turned on.
 - **A few extras.** Pick a font (the panel's IBM Plex Sans, Inter, JetBrains Mono, or the device's own), set the corner radius, switch to a compact density, and upload your own logo.
 - **Flat and readable.** Solid colours, no gradients and no glows. Every built-in preset passes WCAG AA in both schemes, and the tests check it.
+
+## Screenshots
+
+The server and player names below are made up.
+
+| | |
+| --- | --- |
+| ![The console in Graphite, light scheme](docs/screenshots/console-light.png) | ![The Halloween preset with bats](docs/screenshots/halloween.png) |
+| The console in Graphite, light scheme. | Halloween, with bats flying over the page. |
+| ![The Christmas preset with snow](docs/screenshots/christmas.png) | ![Admin, Theme Studio, the preset list](docs/screenshots/theme-studio.png) |
+| Christmas, with falling snow. | Admin → Theme Studio: what is on now, the default and every preset. |
+| ![The preset editor](docs/screenshots/preset-editor.png) | ![Schedules and the coming switches](docs/screenshots/schedules.png) |
+| The preset editor, with a preview of both schemes and a contrast check. | Schedules, and the next times the preset changes. |
+| ![The account page preset picker](docs/screenshots/account-preset.png) | ![The console on a phone, dark and light](docs/screenshots/phone.png) |
+| The preset picker on the account page, when an admin allows it (set to Ocean here). | On a phone, dark and light. |
+
+![The console in eight presets](docs/screenshots/presets.png)
+
+The console in OLED black, Midnight, Slate, Forest, Ocean, Crimson, Rustix and Forest light.
 
 ## Install
 
