@@ -9,6 +9,7 @@
         "typecheck": "tsc",
         "test": "vitest run",
         "test:watch": "vitest",
+        "test:php": "php tests/themes.php",
         "palettes": "node --experimental-strip-types --no-warnings palettes/build.ts",
         "contrast": "node --experimental-strip-types --no-warnings palettes/contrast.ts"
     },
