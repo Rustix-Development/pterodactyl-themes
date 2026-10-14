@@ -3,6 +3,7 @@ import { httpErrorToHuman, Select, toast } from '@pterodactyl/sdk';
 import { useTheme } from '@pterodactyl/sdk/theme';
 import { choicesQuery, userApi } from '../api.ts';
 import { refreshPreset } from '../lib/live.ts';
+import { fromSelectValue, PANEL_CHOICE, toSelectValue } from './choice.ts';
 
 /**
  * A card on the account page for picking your own preset, when an admin allows it. "The panel's
@@ -26,9 +27,9 @@ export default function PresetPicker() {
 
     const swatchScheme = scheme === 'light' ? 'light' : 'dark';
     const options = [
-        { value: 0, label: 'The panel’s choice', textLabel: 'The panel’s choice' },
+        { value: PANEL_CHOICE, label: 'The panel’s choice', textLabel: 'The panel’s choice' },
         ...data.presets.map((preset) => ({
-            value: preset.id,
+            value: String(preset.id),
             textLabel: preset.name,
             label: (
                 <span className='flex items-center gap-2'>
@@ -50,7 +51,13 @@ export default function PresetPicker() {
                 <label htmlFor='ts-own-preset' className='sr-only'>
                     Theme preset
                 </label>
-                <Select id='ts-own-preset' value={data.choice ?? 0} disabled={choose.isPending} options={options} onChange={(value) => choose.mutate(Number(value) || null)} />
+                <Select
+                    id='ts-own-preset'
+                    value={toSelectValue(data.choice)}
+                    disabled={choose.isPending}
+                    options={options}
+                    onChange={(value) => choose.mutate(fromSelectValue(value))}
+                />
             </div>
         </section>
     );
