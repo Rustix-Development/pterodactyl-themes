@@ -3,7 +3,7 @@
     "id": "themes",
     "type": "theme",
     "name": "Theme Studio",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "A free theme for the whole panel: dark and light, ten built-in presets, presets of your own, and scheduled seasonal themes like Halloween and Christmas with their effects.",
     "author": "RustixDev",
     "icon": "palette",
