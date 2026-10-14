@@ -9,7 +9,9 @@
         "types": ["vite/client", "node"],
         "strict": true,
         "noEmit": true,
-        "skipLibCheck": true
+        "skipLibCheck": true,
+        "allowImportingTsExtensions": true,
+        "resolveJsonModule": true
     },
-    "include": ["src/**/*"]
+    "include": ["src/**/*", "palettes/**/*"]
 }

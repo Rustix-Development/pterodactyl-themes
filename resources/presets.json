@@ -1,0 +1,198 @@
+{
+    "graphite": {
+        "name": "Graphite",
+        "effect": "none",
+        "dark": {
+            "background": "#111317",
+            "surface": "#1b1e24",
+            "text": "#e7e9ec",
+            "primary": "#2563eb",
+            "secondary": "#7aa7ff"
+        },
+        "light": {
+            "background": "#f3f4f6",
+            "surface": "#ffffff",
+            "text": "#1a1d22",
+            "primary": "#2563eb",
+            "secondary": "#1d4ed8"
+        }
+    },
+    "oled": {
+        "name": "OLED black",
+        "effect": "none",
+        "dark": {
+            "background": "#000000",
+            "surface": "#0e0e10",
+            "text": "#ececec",
+            "primary": "#2563eb",
+            "secondary": "#7aa7ff"
+        },
+        "light": {
+            "background": "#fafafa",
+            "surface": "#ffffff",
+            "text": "#111111",
+            "primary": "#1f1f1f",
+            "secondary": "#1d4ed8"
+        }
+    },
+    "midnight": {
+        "name": "Midnight",
+        "effect": "none",
+        "dark": {
+            "background": "#0d1222",
+            "surface": "#151b30",
+            "text": "#e4e8f5",
+            "primary": "#5b5bd6",
+            "secondary": "#a5b4fc"
+        },
+        "light": {
+            "background": "#f2f3f9",
+            "surface": "#ffffff",
+            "text": "#161a2e",
+            "primary": "#4f46e5",
+            "secondary": "#4338ca"
+        }
+    },
+    "slate": {
+        "name": "Slate",
+        "effect": "none",
+        "dark": {
+            "background": "#181c23",
+            "surface": "#1f252e",
+            "text": "#e2e7ee",
+            "primary": "#1d74b8",
+            "secondary": "#7dd3fc"
+        },
+        "light": {
+            "background": "#edf0f4",
+            "surface": "#ffffff",
+            "text": "#1d2530",
+            "primary": "#0369a1",
+            "secondary": "#075985"
+        }
+    },
+    "forest": {
+        "name": "Forest",
+        "effect": "none",
+        "dark": {
+            "background": "#0f1712",
+            "surface": "#17221b",
+            "text": "#e3ece5",
+            "primary": "#15803d",
+            "secondary": "#6ee7a0"
+        },
+        "light": {
+            "background": "#f1f5f1",
+            "surface": "#ffffff",
+            "text": "#15241a",
+            "primary": "#166534",
+            "secondary": "#166534"
+        }
+    },
+    "ocean": {
+        "name": "Ocean",
+        "effect": "none",
+        "dark": {
+            "background": "#0a1620",
+            "surface": "#11212c",
+            "text": "#e0edf3",
+            "primary": "#0e7490",
+            "secondary": "#67e8f9"
+        },
+        "light": {
+            "background": "#eef5f7",
+            "surface": "#ffffff",
+            "text": "#10242c",
+            "primary": "#0e7490",
+            "secondary": "#155e75"
+        }
+    },
+    "crimson": {
+        "name": "Crimson",
+        "effect": "none",
+        "dark": {
+            "background": "#170f11",
+            "surface": "#22171a",
+            "text": "#f0e4e6",
+            "primary": "#c81e47",
+            "secondary": "#fda4b8"
+        },
+        "light": {
+            "background": "#f8f2f3",
+            "surface": "#ffffff",
+            "text": "#2a1419",
+            "primary": "#be123c",
+            "secondary": "#9f1239"
+        }
+    },
+    "rustix": {
+        "name": "Rustix",
+        "effect": "none",
+        "dark": {
+            "background": "#161212",
+            "surface": "#201a1a",
+            "text": "#efe7e6",
+            "primary": "#b8433f",
+            "secondary": "#f0a29d"
+        },
+        "light": {
+            "background": "#f7f3f2",
+            "surface": "#ffffff",
+            "text": "#241a19",
+            "primary": "#9b3735",
+            "secondary": "#9b3735"
+        }
+    },
+    "halloween": {
+        "name": "Halloween",
+        "effect": "bats",
+        "dark": {
+            "background": "#120e16",
+            "surface": "#1c1622",
+            "text": "#f3ebe0",
+            "primary": "#f97316",
+            "secondary": "#fdba74"
+        },
+        "light": {
+            "background": "#faf4ea",
+            "surface": "#fffdf8",
+            "text": "#24131f",
+            "primary": "#c2410c",
+            "secondary": "#9a3412"
+        },
+        "effectColors": {
+            "dark": [
+                "#6a5487"
+            ],
+            "light": [
+                "#2a1f33"
+            ]
+        }
+    },
+    "christmas": {
+        "name": "Christmas",
+        "effect": "snow",
+        "dark": {
+            "background": "#0b1913",
+            "surface": "#12241b",
+            "text": "#f2f0e8",
+            "primary": "#d0303a",
+            "secondary": "#e9c46a"
+        },
+        "light": {
+            "background": "#f5f8f5",
+            "surface": "#ffffff",
+            "text": "#13261c",
+            "primary": "#b91c1c",
+            "secondary": "#166534"
+        },
+        "effectColors": {
+            "dark": [
+                "#ffffff"
+            ],
+            "light": [
+                "#9fb3c8"
+            ]
+        }
+    }
+}

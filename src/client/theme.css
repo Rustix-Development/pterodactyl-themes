@@ -1,6 +1,11 @@
 /*
  * Theme Studio. The panel stylesheet with every class the panel uses, then this theme's own.
- * The colours live in palettes.css, which palettes/build.mjs writes from palettes/presets.mjs.
+ *
+ * The colours: palettes.css (written by palettes/build.ts) holds the default preset's seeds and
+ * derives every colour role from the seeds. The active preset's seeds come from the server, at
+ * /extensions/themes/preset.css, which the build puts in an @import at the very top of
+ * dist/theme.css (see vite.config.mjs). An @import holds the stylesheet back until it has loaded,
+ * so the page paints in the right colours from the first frame.
  */
 @import '@pterodactyl/sdk/theme-entry.css';
 @import './palettes.css';
@@ -47,6 +52,13 @@
 
 :root {
     --ts-effect: #ffffff;
+    --ts-effect-kind: none;
+}
+
+/* The editor's live preview: the roles in palettes.css re-derive from the seeds set on it. */
+.ts-preview {
+    background-color: var(--background);
+    color: var(--foreground);
 }
 
 /* Fonts. */
@@ -86,11 +98,11 @@
     }
 
     .text-destructive {
-        color: var(--ts-danger);
+        color: var(--ts-danger-text);
     }
 
     .text-destructive\/80 {
-        color: color-mix(in oklab, var(--ts-danger) 80%, transparent);
+        color: color-mix(in oklab, var(--ts-danger-text) 80%, transparent);
     }
 
     @media (hover: hover) {
@@ -102,7 +114,7 @@
 
 @layer components {
     .input-help.error {
-        color: var(--ts-danger);
+        color: var(--ts-danger-text);
     }
 }
 

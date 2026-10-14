@@ -9,8 +9,8 @@
         "typecheck": "tsc",
         "test": "vitest run",
         "test:watch": "vitest",
-        "palettes": "node palettes/build.mjs",
-        "contrast": "node palettes/checks.mjs"
+        "palettes": "node --experimental-strip-types --no-warnings palettes/build.ts",
+        "contrast": "node --experimental-strip-types --no-warnings palettes/contrast.ts"
     },
     "devDependencies": {
         "@pterodactyl/sdk": "file:./sdk/pterodactyl-sdk-2.0.0-beta.6.tgz",
