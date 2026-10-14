@@ -152,3 +152,14 @@
 [data-sonner-toaster][data-sonner-theme] [data-sonner-toast] [data-description] {
     color: var(--muted-foreground);
 }
+
+/* The console's command line sits on the dark terminal in both schemes, so it takes the terminal's text colour. */
+input[aria-label='Console command input.'],
+input[aria-label='Console command input.'] + div {
+    color: var(--terminal-foreground);
+}
+
+input[aria-label='Console command input.']::placeholder {
+    color: color-mix(in oklab, var(--terminal-foreground) 70%, var(--terminal-background));
+    opacity: 1;
+}
