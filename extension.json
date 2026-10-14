@@ -1,0 +1,157 @@
+{
+    "$schema": "./node_modules/@pterodactyl/sdk/manifest.schema.json",
+    "id": "themes",
+    "type": "theme",
+    "name": "Theme Studio",
+    "version": "1.0.0",
+    "description": "A free theme for the whole panel: a proper dark mode and a light mode, colour presets, your own colours, and Halloween and Christmas themes with falling snow.",
+    "author": "RustixDev",
+    "icon": "palette",
+    "requires": {
+        "panel": "^2.0.0-dev",
+        "sdk": ">=2.0.0-beta.6 <3.0"
+    },
+    "ui": {
+        "entry": "dist/client.js"
+    },
+    "theme": {
+        "stylesheet": "dist/theme.css",
+        "schemes": ["dark", "light"],
+        "settings": {
+            "preset": {
+                "type": "select",
+                "label": "Preset",
+                "help": "The colours of the panel. Every preset has a dark and a light version; people switch between them from their account menu.",
+                "options": {
+                    "graphite": "Graphite",
+                    "oled": "OLED black",
+                    "midnight": "Midnight",
+                    "slate": "Slate",
+                    "forest": "Forest",
+                    "ocean": "Ocean",
+                    "crimson": "Crimson",
+                    "rustix": "Rustix"
+                },
+                "default": "graphite",
+                "attribute": "data-ts-preset"
+            },
+            "accent": {
+                "type": "color",
+                "label": "Accent",
+                "help": "Buttons, links and selected items in both schemes. Leave it empty to use the preset's.",
+                "tab": "Colours",
+                "token": "--ts-custom-accent"
+            },
+            "darkBackground": {
+                "type": "color",
+                "label": "Dark background",
+                "help": "The page behind everything. Cards follow it unless you set a surface too.",
+                "tab": "Colours",
+                "token": "--ts-custom-dark-background"
+            },
+            "darkSurface": {
+                "type": "color",
+                "label": "Dark surface",
+                "help": "Cards, tables and menus.",
+                "tab": "Colours",
+                "token": "--ts-custom-dark-surface"
+            },
+            "darkText": {
+                "type": "color",
+                "label": "Dark text",
+                "help": "Keep it light enough to read on your dark background.",
+                "tab": "Colours",
+                "token": "--ts-custom-dark-text"
+            },
+            "lightBackground": {
+                "type": "color",
+                "label": "Light background",
+                "tab": "Colours",
+                "token": "--ts-custom-light-background"
+            },
+            "lightSurface": {
+                "type": "color",
+                "label": "Light surface",
+                "tab": "Colours",
+                "token": "--ts-custom-light-surface"
+            },
+            "lightText": {
+                "type": "color",
+                "label": "Light text",
+                "help": "Keep it dark enough to read on your light background.",
+                "tab": "Colours",
+                "token": "--ts-custom-light-text"
+            },
+            "season": {
+                "type": "select",
+                "label": "Seasonal theme",
+                "help": "Auto turns Halloween on from 15 to 31 October and Christmas on from 1 to 26 December. A seasonal theme sets your own colours aside while it is on.",
+                "tab": "Seasonal",
+                "options": {
+                    "off": "Off",
+                    "auto": "Auto, by the date",
+                    "halloween": "Halloween",
+                    "christmas": "Christmas"
+                },
+                "default": "off",
+                "attribute": "data-ts-season"
+            },
+            "effects": {
+                "type": "select",
+                "label": "Seasonal effects",
+                "help": "Bats at Halloween and falling snow at Christmas. Never shown to people who turn off animations on their device.",
+                "tab": "Seasonal",
+                "options": {
+                    "off": "Off",
+                    "subtle": "Subtle",
+                    "full": "Full"
+                },
+                "default": "subtle",
+                "attribute": "data-ts-effects"
+            },
+            "font": {
+                "type": "select",
+                "label": "Font",
+                "tab": "Look",
+                "options": {
+                    "panel": "IBM Plex Sans (the panel's)",
+                    "inter": "Inter",
+                    "system": "The device's own",
+                    "mono": "JetBrains Mono"
+                },
+                "default": "panel",
+                "attribute": "data-ts-font"
+            },
+            "radius": {
+                "type": "number",
+                "label": "Corner radius",
+                "help": "0 for square corners.",
+                "tab": "Look",
+                "default": 0.5,
+                "min": 0,
+                "max": 1.25,
+                "step": 0.125,
+                "unit": "rem",
+                "token": "--radius"
+            },
+            "density": {
+                "type": "select",
+                "label": "Density",
+                "tab": "Look",
+                "options": {
+                    "comfortable": "Comfortable",
+                    "compact": "Compact"
+                },
+                "default": "comfortable",
+                "attribute": "data-ts-density"
+            },
+            "logo": {
+                "type": "image",
+                "label": "Logo",
+                "help": "Shown in place of the panel's name in the header and on the sign-in page.",
+                "tab": "Look",
+                "token": "--brand-logo"
+            }
+        }
+    }
+}
