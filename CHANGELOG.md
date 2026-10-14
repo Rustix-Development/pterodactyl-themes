@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.0.1
+
+- The account preset picker shows "The panel's choice" again instead of an empty box.
+- The console's command line is readable in the light scheme: it now uses the terminal's own text colour.
+
 ## 1.0.0
 
 - First release: a dark mode and a light mode for the whole panel, built on the panel's own theme system, with a switch for each person in their account menu.

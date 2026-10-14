@@ -124,3 +124,22 @@ describe('stylesheet', () => {
         expect(css).toMatch(/prefers-reduced-motion: reduce\) \{\s*\.ts-effects \{\s*display: none/);
     });
 });
+
+describe('console command line', () => {
+    // Mirrors palettes.css: the terminal and the command line's text and placeholder.
+    const terminal = (c: { background: string; text: string }, scheme: 'dark' | 'light') =>
+        scheme === 'dark' ? mix(c.background, '#000000', 0.7) : mix(c.text, c.background, 0.94);
+    const ids = Object.keys(BUILTINS);
+
+    test.each(ids.flatMap((id) => SCHEMES.map((scheme) => [id, scheme] as const)))('%s %s reads on the terminal', (id, scheme) => {
+        const bg = terminal(BUILTINS[id][scheme], scheme);
+        expect(contrast('#d4d4d4', bg)).toBeGreaterThanOrEqual(4.5);
+        expect(contrast(mix('#d4d4d4', bg, 0.7), bg)).toBeGreaterThanOrEqual(3);
+    });
+
+    test('the stylesheet gives the command line the terminal colours', () => {
+        const css = readFileSync(new URL('../theme.css', import.meta.url), 'utf8');
+        expect(css).toContain("input[aria-label='Console command input.'] + div");
+        expect(css).toMatch(/::placeholder \{\s*color: color-mix\(in oklab, var\(--terminal-foreground\) 70%, var\(--terminal-background\)\);/);
+    });
+});
